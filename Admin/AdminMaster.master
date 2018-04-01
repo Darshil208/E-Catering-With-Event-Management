@@ -1,0 +1,95 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="Admin_AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>.::ECateringEvent</title>
+
+    <link rel="stylesheet" href="css/style.default.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap-fileupload.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap-timepicker.min.css" type="text/css" />
+
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-1.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.9.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-fileupload.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-timepicker.min.js"></script>
+    <script type="text/javascript" src="js/jquery.uniform.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/jquery.tagsinput.min.js"></script>
+    <script type="text/javascript" src="js/jquery.autogrow-textarea.js"></script>
+    <script type="text/javascript" src="js/charCount.js"></script>
+    <script type="text/javascript" src="js/colorpicker.js"></script>
+    <script type="text/javascript" src="js/ui.spinner.min.js"></script>
+    <script type="text/javascript" src="js/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/modernizr.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/forms.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="mainwrapper">
+            <div class="header">
+                <div class="logo">
+                    <a href="Home.aspx" style="color: #FFFFFF; font-size: 32px;">ECatering with Event Management</a>
+                </div>
+                <div class="headerinner">
+                    <ul class="headmenu">
+                        <li class="right">
+                            <div class="userloggedinfo">
+                                <div class="userinfo">
+                                    <h5>Welcome, Admin</h5>
+                                    <ul>
+                                        <li><a href="ChangePassword.aspx">Change Password</a></li>
+                                        <li><a href="Logout.aspx">Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!--headmenu-->
+                </div>
+            </div>
+            <div class="leftpanel">
+                <div class="leftmenu">
+                    <ul class="nav nav-tabs nav-stacked">
+                        <li class="nav-header">Admin Navigation</li>
+                        <li><a href="Home.aspx"><span class="iconfa-laptop"></span>Dashboard</a></li>
+                        <li><a href="state.aspx"><span class="iconfa-pencil"></span>State</a></li>
+                        <li><a href="City.aspx"><span class="iconfa-pencil"></span>City</a></li>
+                        <li><a href="serviceprovider.aspx"><span class="iconfa-pencil"></span>Service Provider</a></li>
+                        <li><a href="Customer.aspx"><span class="iconfa-pencil"></span>Customer</a></li>
+                        <li><a href="UserLogin.aspx"><span class="iconfa-pencil"></span>User Login</a></li>
+                        <li><a href="serviceprovidertype.aspx"><span class="iconfa-pencil"></span>Service Provider Type</a></li>
+                        <li><a href="servicepackage.aspx"><span class="iconfa-pencil"></span>Service Package</a></li>
+                        <li><a href="inquiry.aspx"><span class="iconfa-pencil"></span>Inquiry</a></li>
+                        <li><a href="feedback.aspx"><span class="iconfa-pencil"></span>Feedback</a></li>
+                        <li><a href="eventtype.aspx"><span class="iconfa-pencil"></span>Event Type</a></li>
+                        <li><a href="eventplan.aspx"><span class="iconfa-pencil"></span>Event Plan</a></li>
+                        <li><a href="eventservice.aspx"><span class="iconfa-pencil"></span>Event Service</a></li>
+                        <li><a href="ChangePassword.aspx"><span class="iconfa-pencil"></span>Change Password</a></li>
+                        <li><a href="Logout.aspx"><span class="iconfa-pencil"></span>Logout</a></li>
+                    </ul>
+                </div>
+                <!--leftmenu-->
+            </div>
+            <!-- leftpanel -->
+            <div class="rightpanel">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <!--pageheader-->
+                <!--maincontent-->
+            </div>
+            <!--rightpanel-->
+        </div>
+        <!--mainwrapper-->
+    </form>
+</body>
+</html>

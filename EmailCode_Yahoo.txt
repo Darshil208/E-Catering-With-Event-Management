@@ -1,0 +1,39 @@
+using System.IO;
+using System.Net;
+using System.Net.Mail;
+
+
+
+
+        try
+        {
+            string smtpAddress = "smtp.mail.yahoo.com";
+            int portNumber = 587;
+            bool enableSSL = true;
+
+            string emailFrom = "from email address";
+            string password = "password";
+            string emailTo = "to email address";
+            string subject = subject of email";
+            string body = "body of email";
+            using (MailMessage mail = new MailMessage())
+            {
+                mail.From = new MailAddress(emailFrom);
+                mail.To.Add(emailTo);
+                mail.Subject = subject;
+                mail.Body = body;
+                mail.IsBodyHtml = false;
+                // Can set to false, if you are sending pure text.
+
+                using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
+                {
+                    smtp.Credentials = new NetworkCredential(emailFrom, password);
+                    smtp.EnableSsl = enableSSL;
+                    smtp.Send(mail);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Response.Write(ex.Message);
+        }
